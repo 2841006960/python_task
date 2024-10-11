@@ -32,7 +32,7 @@ Git实验过程的记录请参考[Learning Git Branch Tutorial](https://github.c
 - 使用的git命令：使用markdown代码块的形式记录下你使用的git命令，例如：
 
   ```shell
-  git commint
+  git commit
   ```
 
 - git命令的解释：使用自然语言解释你使用的git命令
@@ -44,7 +44,7 @@ Git实验过程的记录请参考[Learning Git Branch Tutorial](https://github.c
 
   ```shell
   git branch bugFix
-  git checkoutt bugFix
+  git checkout bugFix
   ```
 - git命令的解释：使用自然语言解释你使用的git命令
   
@@ -55,11 +55,11 @@ Git实验过程的记录请参考[Learning Git Branch Tutorial](https://github.c
 
   ```shell
   git branch bugFix
-  gitcheckout bugFix
-  gitcommit
-  gitcheckout main
-  git：commit
-  git mergeebugFix
+  git checkout bugFix
+  git commit
+  git checkout main
+  git commit
+  git merge bugFix
   ```
 - git命令的解释：使用自然语言解释你使用的git命令
   
@@ -69,7 +69,13 @@ Git实验过程的记录请参考[Learning Git Branch Tutorial](https://github.c
 - 使用的git命令：使用markdown代码块的形式记录下你使用的git命令，例如：
 
   ```shell
-  git commint
+  git branch bugFix
+  git checkout bugFix
+  git commit
+  git checkout main
+  git commit
+  git checkout bugFix
+  git rebase main
   ```
 - git命令的解释：使用自然语言解释你使用的git命令
   
