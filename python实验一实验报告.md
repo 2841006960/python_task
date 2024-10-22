@@ -119,6 +119,88 @@ Git实验过程的记录请参考[Learning Git Branch Tutorial](https://github.c
   ```
 - **git命令的解释**: 交互式变基可以对多个提交进行编辑、删除、合并或重排序。
 
+以下是补充的第11到18个实验的内容：
+
+---
+
+### 第11个小实验：Git Clone
+- **动机**: 使用`git clone`可以从远程仓库复制一份代码到本地，便于在本地进行开发和测试。
+- **使用的git命令**:
+  ```shell
+  git clone <repository-url>
+  ```
+- **git命令的解释**: `git clone`命令用于从远程仓库创建一个本地副本，包含所有的版本历史，方便开发者进行修改和版本管理。
+
+### 第12个小实验：远程分支
+- **动机**: 使用远程分支可以让团队成员共享和管理代码，保持代码库的一致性。
+- **使用的git命令**:
+  ```shell
+  git commit
+  git checkout o/main
+  git commit
+  ```
+- **git命令的解释**: `git checkout o/main`用于切换到远程分支，`git commit`用于提交当前修改到本地。
+
+### 第13个小实验：Git Fetch
+- **动机**: `git fetch`用于从远程仓库获取最新的提交记录，以便更新本地分支的信息。
+- **使用的git命令**:
+  ```shell
+  git fetch
+  ```
+- **git命令的解释**: `git fetch`命令用于下载远程分支的更新，但不自动合并到当前分支，方便开发者选择性地合并。
+
+### 第14个小实验：Git Pull
+- **动机**: `git pull`命令用于从远程仓库获取最新提交并合并到当前分支，保持本地代码与远程一致。
+- **使用的git命令**:
+  ```shell
+  git pull
+  ```
+- **git命令的解释**: `git pull`命令实际上是`git fetch`和`git merge`的组合，可以直接将远程的变更合并到本地分支。
+
+### 第15个小实验：模拟团队合作
+- **动机**: 模拟团队合作可以帮助理解如何在团队环境中使用Git进行协作和版本管理。
+- **使用的git命令**:
+  ```shell
+  git clone <repository-url>
+  git fakeTeamwork 2
+  git commit
+  git pull
+  ```
+- **git命令的解释**: 在模拟团队合作中，通过`git fakeTeamwork`可以在远程主分支上提交变更，然后通过`git pull`更新本地分支。
+
+### 第16个小实验：Git Push
+- **动机**: 使用`git push`将本地提交推送到远程仓库，分享代码和更新。
+- **使用的git命令**:
+  ```shell
+  git commit
+  git commit
+  git push
+  ```
+- **git命令的解释**: `git push`命令用于将本地分支的提交上传到远程仓库，更新远程代码库。
+
+### 第17个小实验：偏离的提交历史
+- **动机**: 理解如何处理偏离的提交历史，学习解决合并冲突的方法。
+- **使用的git命令**:
+  ```shell
+  git clone <repository-url>
+  git fakeTeamwork
+  git commit
+  git pull --rebase
+  git push
+  ```
+- **git命令的解释**: 在处理偏离的提交历史时，使用`git pull --rebase`可以避免产生合并提交，从而保持提交历史的整洁。
+
+### 第18个小实验：锁定的Main (Locked Main)
+- **动机**: 理解如何在多分支环境中锁定主分支，确保主分支的稳定性。
+- **使用的git命令**:
+  ```shell
+  git branch feature
+  git branch -f main o/main
+  git checkout feature
+  git push
+  ```
+- **git命令的解释**: `git branch -f`用于强制将主分支指向某个特定的提交，`git push`将特性分支推送到远程，保持主分支的锁定状态。
+
 ## 实验总结
 
-通过这次实验，我学会了使用Git进行版本控制的基本操作，包括分支管理、合并、变基等技术。掌握了Markdown语法，可以用于文档的快速编写和排版。此外，学会了VSCode的使用和配置，尤其是如何高效地进行代码编辑和管理。
+通过这次实验，我学会了使用Git进行版本控制的基本操作，包括分支管理、合并、变基等技术。掌握了Markdown语法，可以用于文档的快速编写和排版。此外，学会了VSCode的使用和配置，尤其是如何高效地进行代码编辑和管理。这些知识将为我的未来项目开发和团队协作提供重要支持。
